@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Add post</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="navbar-links">
+          <li><a href="index.html">Home</a></li>
+        </ul>
+        <div class="navbar-pfp">
+          <a href="login.html">
+            <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
+          </a>
+        </div>
+      </nav>
+    </header>
+    <form action="index.html">
+    
+      <div class ="container">
+        <div class="inputField">
+          <label for="postBody"><b>Post body</b></label> 
+          <input type="text" id="postBody" placeholder="textarea" name="Post body">
+        </div>
+
+        <div class="inputField">
+          <label for="File"><b>Select file</b></label> 
+          <input type="file" id="File" name="File">
+        </div>
+        <button type="submit">Create post</button>
+        
+  
+      </div>
+    </form>
+  </body>
+</html>

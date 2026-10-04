@@ -1,0 +1,194 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* the following three rulesets are for keeping the footer at the bottom of the page */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* the previous three rulesets are for keeping the footer at the bottom of the page */
+
+footer {
+    flex-shrink: 0;
+    background-color: lightgray;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 15px;
+    
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+    a {
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+    }
+     a:hover {
+        background-color: darkgray;
+    }
+    li {
+        list-style: none;
+    }
+}
+/* Navigation bar styling ends */
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    min-height: 100vh;
+    border: 10px;
+    gap: 10px;
+}
+
+aside {
+    background-color: lightgray;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    flex: 2;
+    padding: 1%;
+}
+
+.posts {
+    flex: 6;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+
+.post {
+    width: 100%;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 100%;
+    padding: 1vw;
+    border-radius: 10px;
+    height: fit-content;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div {
+        display: flex;
+        align-items: center;
+        gap: 1vw;
+    }
+}
+
+.user-pfp {
+    height: 5vh;
+}
+
+.post-pic {
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+}
+
+.right-aside {
+    flex: 2;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+}
+
+/* AddPost Page and Login page styling */
+.container {
+    display:flex ;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    gap: 10px;
+    border-radius: 30px;
+    padding: 20px 10px;
+    width: 100%;
+    max-width: 300px;
+    
+}
+
+.container > a {
+    color: rgb(26, 178, 224);
+    text-decoration: none;
+    margin: 0;
+}
+
+.container > p {
+    margin: 0;
+}
+
+.container h1 {
+    font-weight: bolder;
+    font-size: medium;
+    margin: 0px;
+} 
+
+.container > button {
+    background-color: rgb(35, 35, 104);
+    color: white;
+}
+
+.container h1 ~ input {
+    width: 50%;
+}
+
+/* AddPost Input field styling */
+.inputField {
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.inputField label + input {
+    width: 180px;
+    
+}
+
+
