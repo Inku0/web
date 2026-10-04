@@ -91,26 +91,19 @@ aside {
     padding: 15px;
 }
 
-.Esimene, .Teine, .Kolmas, .Neljas, .Viies {
+.post {
     width: 100%;
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
     max-width: 100%;
-    padding: 15px, 20px;
+    padding: 15px 20px 0 0;
     border-radius: 10px;
     height: fit-content;
     overflow: hidden;
     box-sizing: border-box;
-    
 }
 
-.Pos_tekst {
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: break-word;
-}
-
-.Pealis {
+.post-header {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -122,7 +115,7 @@ aside {
     height: 80px;
 }
 
-.postituse_pildid {
+.post-pic {
     display: block;
     max-width: 100%;
     max-height: 500px;
@@ -131,21 +124,21 @@ aside {
     object-fit: contain;
 }
 
-.Pealis h2 {
+.post-header h2 {
     margin: 0;
 }
 
-.kuupaev {
+.date {
     margin-left: auto !important;
     margin-right: 20px;
 }
 
-.Vormistus {
+.post-body {
     width: 100%;
     margin-left: 20px;
 }
 
-.Postitus h2 {
+.post h2 {
     margin: 15px 0 0 0;
 }
 
