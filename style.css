@@ -30,14 +30,13 @@ footer {
     
 }
 
+/* Navigation bar styling */
 nav {
     display: flex;
     justify-content: space-between;
     background-color: lightgray;
     border-radius: 10px;
 }
-
-/* Navigation bar styling */
 
 .navbar-links {
     display: flex;
@@ -57,11 +56,7 @@ nav {
         list-style: none;
     }
 }
-
-.user-pfp {
-    width: 50px;
-    height: 50px;
-}
+/* Navigation bar styling ends */
 
 .content {
     display: flex;
