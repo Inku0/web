@@ -16,7 +16,16 @@ body {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     flex-shrink: 0;
+    background-color: lightgray;
+    border-radius: 10px;
+    gap: 15px;
+    padding: 15px;
+    
 }
 
 nav {
@@ -33,6 +42,12 @@ nav {
     a {
         text-decoration: none;
         color: black;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease;
+    }
+     a:hover {
+        background-color: darkgray;
     }
     li {
         list-style: none;
@@ -44,5 +59,88 @@ nav {
     height: 50px;
 }
 
+.content{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    min-height: 100vh;
+    border: 10px;
+    gap: 10px;
+}
+.Kõrvalosa{
+    background-color: lightgray;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    flex: 2;
+}
+
+.Postitused{
+    flex: 6;
+    background-color: lightgray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+}
+.Esimene, .Teine, .Kolmas, .Neljas, .Viies{
+    width: 100%;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 100%;
+    padding: 15px, 20px;
+    border-radius: 10px;
+    height: fit-content;
+    overflow: hidden;
+    box-sizing: border-box;
+    
+}
+.Pos_tekst{
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.Pealis {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.user-pfp {
+    width: 80px;
+    height: 80px;
+}
+.postituse_pildid {
+    display: block;
+    max-width: 100%;
+    max-height: 500px;
+    width: auto;
+    margin: 10px auto;
+    object-fit: contain;
+}
+
+.Pealis h2 {
+    margin: 0;
+}
+
+.kuupaev {
+    margin-left: auto !important;
+    margin-right: 20px;
+}
+
+.Postitus1 {
+    width: 100%;
+    margin-left: 30px;
+}
+
+.Postitus h2 {
+    margin: 15px 0 0 0;
+}
+.Tühi_ala{
+    flex: 2;
+    background-color: lightgray;
+    border-radius: 10px;
+}
 /* TODO: Home and Add Post in the navigation bar should change their background color
     when you hover over them  */
