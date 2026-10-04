@@ -26,6 +26,8 @@ nav {
     border-radius: 10px;
 }
 
+/* Navigation abr styling */
+
 .navbar-links {
     display: flex;
     justify-content: space-between;
@@ -38,11 +40,65 @@ nav {
         list-style: none;
     }
 }
+.navbar-links a:hover {
+    text-align: aqua;
+}
 
 .user-pfp {
     width: 50px;
     height: 50px;
 }
 
-/* TODO: Home and Add Post in the navigation bar should change their background color
-    when you hover over them  */
+.container {
+    display:flex ;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgray;
+    gap: 10px;
+    border-radius: 30px;
+    padding: 20px 10px;
+    width: 100%;
+    max-width: 300px;
+    
+}
+
+.container > a {
+    color: rgb(26, 178, 224);
+    text-decoration: none;
+    margin: 0;
+}
+.container > p {
+    margin: 0;
+}
+.container  h1 {
+    font-weight: bolder;
+    font-size: medium;
+    margin: 0px;
+} 
+
+.container > button {
+    background-color: rgb(35, 35, 104);
+    color: white;
+}
+.container h1 ~ input {
+    width: 50%;
+}
+
+.inputField {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: regular;
+    
+}
+.inputField label + input {
+    width: 140px;
+}
+
