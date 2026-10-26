@@ -1,0 +1,27 @@
+[
+  {
+    "author": "Sam Ro.",
+    "profilePic": {
+      "mime": "image/svg+xml",
+      "url": "res/images/me.svg"
+    },
+    "feeling": "confused",
+    "date": "1.09.2026",
+    "body": "Is everybody at class?",
+    "bodyPic": {}
+  },
+  {
+    "author": "Sam Ro.",
+    "profilePic": {
+      "mime": "image/svg+xml",
+      "url": "res/images/me.svg"
+    },
+    "feeling": "happy",
+    "date": "3.09.2026",
+    "body": "Tired of studying? Join us at the UT run club with a DJ, so you can get a head start on partying.",
+    "bodyPic": {
+      "mime": "image/png",
+      "url": "res/images/DJ_running.png"
+    }
+  }
+]
