@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="posts.js" defer></script>
     <title>Index</title>
   </head>
   <body>
@@ -15,9 +16,14 @@
           <li><a href="addPost.html">Add Post</a></li>
         </ul>
         <div class="navbar-pfp">
-          <a href="login.html">
-            <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
+          <a href="login.html" id="userPfpLink">
+            <img class="user-pfp" id="userPfp" alt="User's profile picture" src="res/images/me.svg">
           </a>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <p class="user-name" id="dropdownName"></p>
+            <p class="user-email" id="dropdownEmail"> </p>
+            <a href="#" class="logout-button" id="logoutButton">Logout</a>
+          </div>
         </div>
       </nav>
     </header>
@@ -32,96 +38,15 @@
         </p>
       </aside>
 
-      <div class="posts">
-        <article class="post">
-          <div class="post-header">
-            <div>
-              <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
-              <h2>Sam Ro.</h2>
-              <h3>is feeling confused</h3>
-            </div>
-            <p>1.09.2026</p>
-          </div>
-          <hr>
-          <div class="post-body">
-            <p>Is everybody at class?</p>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="post-header">
-            <div>
-              <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
-              <h2>Sam Ro.</h2>
-              <h3>is feeling happy</h3>
-            </div>
-            <p>3.09.2026</p>
-          </div>
-          <hr>
-          <div class="post-body">
-            <p>Tired of studying? Join us at the UT run club with a DJ , so you could get a head start on partying.</p>
-            <img class="post-pic" alt="DJ running" src="res/images/DJ_running.png">
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="post-header">
-            <div>
-              <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
-              <h2>Sam Ro.</h2>
-              <h3>is feeling excited</h3>
-            </div>
-            <p>2.09.2026</p>
-          </div>
-          <hr>
-          <div class="post-body">
-            <p>Want some FREE EAP?</p>
-            <p>Click the link below, log in and here you go :D
-              <a href="https://tinyurl.com/55pt2w7w" target="_blank">www.FREEEAPNOSCAM.com</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="post-header">
-            <div>
-              <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
-              <h2>Sam Ro.</h2>
-              <h3>is feeling blessed</h3>
-            </div>
-            <p>4.09.2026</p>
-          </div>
-          <hr>
-          <div class="post-body">
-            <p>Schoolwork is getting hard</p>
-            <p>Did some retail therapy to pick me up :D</p>
-            <img class="post-pic" alt="new shoes" src="res/images/balencies.webp">
-          </div>
-        </article>
-
-        <article class="post">
-          <div class="post-header">
-            <div>
-              <img class="user-pfp" alt="User's profile picture" src="res/images/me.png">
-              <h2>Sam Ro.</h2>
-              <h3>is feeling business</h3>
-            </div>
-            <p>4.09.2026</p>
-          </div>
-          <hr>
-          <div class="post-body">
-            <p>Want to make some quick and easy money?</p>
-            <p>I'll buy your car (in any condition) from you every day, everytime. Call me +372123456789</p>
-            <img class="post-pic" alt="busted up car" src="res/images/auto.avif">
-          </div>
-        </article>
+      <div id="posts" class="posts">
       </div>
       <aside class="right-aside">
 
       </aside>
     </div>
     <footer>
-      <h3>Footer</h3>
+      <h2>Footer</h2>
     </footer>
+    <script src="account.js"></script>
   </body>
 </html>
