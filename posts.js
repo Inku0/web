@@ -1,4 +1,5 @@
-const postsUrl = "https://ingvarruulib.com/posts.json";
+//const postsUrl = "https://ingvarruulib.com/posts.json";
+const postsUrl = "res/posts.json";
 
 const loadPosts = async () => {
   try {
@@ -50,7 +51,7 @@ const renderPosts = (posts) => {
     postBody.className = "post-body";
 
     const postMessage = document.createElement("p");
-    postMessage.textContent = rawPost.body;
+    postMessage.innerHTML = rawPost.body;
 
     postBody.appendChild(postMessage);
 
@@ -59,6 +60,10 @@ const renderPosts = (posts) => {
       bodyPicture.className = "post-pic";
       bodyPicture.alt = "";
       bodyPicture.src = rawPost.bodyPic.url;
+
+      bodyPicture.style.display = "block";
+      bodyPicture.style.margin = "0 auto";
+      bodyPicture.style.maxWidth = "100%";
 
       postBody.appendChild(bodyPicture);
     }
