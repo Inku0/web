@@ -13,20 +13,24 @@
           <li><a href="index.html">Home</a></li>
         </ul>
         <div class="navbar-pfp">
-          <a href="login.html">
-            <img class="user-pfp" alt="User's profile picture" src="res/images/me.svg">
+          <a href="login.html" id="userPfpLink">
+            <img class="user-pfp" id="userPfp" alt="User's profile picture" src="res/images/me.svg">
           </a>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <p class="user-name" id="dropdownName"></p>
+            <p class="user-email" id="dropdownEmail"> </p>
+            <a href="#" class="logout-button" id="logoutButton">Logout</a>
+          </div>
         </div>
       </nav>
     </header>
-    <form action="index.html">
-      
+    <form action="index.html" method="POST" id="loginForm">
       <div class ="container">
         <h1> Welcome to PostIt</h1>
         <a href="#">Create an account</a>
         <p> or <br> Please log in  </p>
         <label>
-          <input type="text" placeholder="Email" name="Email" required>
+          <input type="text" placeholder="Email" name="Email" id="emailInput" required>
         </label>
 
         <label>
@@ -37,5 +41,6 @@
         <a href="#">Forgot password</a>
       </div>
     </form>
+    <script src="account.js"></script>
   </body>
 </html>

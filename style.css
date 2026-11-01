@@ -2,6 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-color: rgb(216, 234, 240);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* the following three rulesets are for keeping the footer at the bottom of the page */
@@ -23,7 +25,7 @@ footer {
 
 footer {
     flex-shrink: 0;
-    background-color: lightgray;
+    background-color: rgb(151, 168, 170);
     border-radius: 10px;
     gap: 15px;
     padding: 15px;
@@ -34,8 +36,8 @@ footer {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: lightgray;
-    border-radius: 10px;
+    background-color: rgb(151, 168, 170);
+    border-radius: 0 0 10px 10px;
 }
 
 .navbar-links {
@@ -44,64 +46,78 @@ nav {
     gap: 1vw;
     a {
         text-decoration: none;
-        color: black;
+        color: #141515;
         padding: 10px 15px;
         border-radius: 5px;
         transition: background-color 0.2s ease;
     }
      a:hover {
-        background-color: darkgray;
+        background-color: rgb(180, 199, 200);
     }
     li {
         list-style: none;
     }
 }
+
+/* Dropdown menu styling */
 .navbar-pfp {
-    position: relative;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
+  position: relative;
+  display: inline-block;
 }
-
 .navbar-pfp .user-pfp {
-    height: 60px;
-    width: 60px;
-    cursor: pointer;
-    object-fit: cover;
+  width: 40px;
+  object-fit: fill;
+  border-radius: 25%;
+  padding-top: 5px;
+  padding-right: 5px;
 }
 
-/* Dropdown menu */
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: calc(100% + 5px);
-    right: 0;
-    width: 220px;
-    background-color: #d6d6d6;
-    border-radius: 10px;
-    padding: 15px;
-    z-index: 1002;
-    box-sizing: border-box;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 8px;
+  background-color: rgb(151, 170, 172);
+  min-width: 200px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 9999;
 }
+
+/* Shown when JS adds the '.show' class */
 .dropdown-menu.show {
-    display: block;
+  display: block;
 }
 
-.dropdown-menu p {
-    margin: 5px 0;
-    font-size: 16px;
-    color: black;
+.dropdown-menu .user-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #141515;
+  margin: 0 0 4px 0;
 }
 
-.dropdown-menu .logout {
-    cursor: pointer;
+.dropdown-menu .user-email {
+  font-size: 0.85rem;
+  color: #141515;
+  margin: 0 0 12px 0;
+  word-break: break-all;
 }
 
-.dropdown-menu .logout:hover {
-    text-decoration: underline;
+.dropdown-menu .logout-button {
+  display: block;
+  text-decoration: none;
+  color: #be1e0d;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding-top: 8px;
+  border-top: 1px solid #ecf0f1;
 }
 
-/* Navigation bar styling ends */
+.dropdown-menu .logout-button:hover {
+  text-decoration: underline;
+}
 
 .content {
     display: flex;
@@ -113,7 +129,7 @@ nav {
 }
 
 aside {
-    background-color: lightgray;
+    background-color: rgb(174, 189, 197);
     font-family: 'Courier New', Courier, monospace;
     border-radius: 10px;
     flex: 2;
@@ -122,7 +138,7 @@ aside {
 
 .posts {
     flex: 6;
-    background-color: lightgray;
+    background-color:rgb(174, 189, 197);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -167,7 +183,7 @@ aside {
 
 .right-aside {
     flex: 2;
-    background-color: lightgray;
+    background-color: rgb(151, 168, 170);
     border-radius: 10px;
 }
 
@@ -187,7 +203,7 @@ aside {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightgray;
+    background-color: rgb(197, 213, 214);
     gap: 10px;
     border-radius: 30px;
     padding: 20px 10px;
