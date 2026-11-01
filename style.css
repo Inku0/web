@@ -56,6 +56,51 @@ nav {
         list-style: none;
     }
 }
+.navbar-pfp {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar-pfp .user-pfp {
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    width: 220px;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 1002;
+    box-sizing: border-box;
+}
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: black;
+}
+
+.dropdown-menu .logout {
+    cursor: pointer;
+}
+
+.dropdown-menu .logout:hover {
+    text-decoration: underline;
+}
+
 /* Navigation bar styling ends */
 
 .content {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="posts.js" type="text/javascript"></script>
+    <script src="posts.js" defer></script>
     <title>Index</title>
   </head>
   <body>
@@ -16,10 +16,19 @@
           <li><a href="addPost.html">Add Post</a></li>
         </ul>
         <div class="navbar-pfp">
-          <a href="login.html">
-            <img class="user-pfp" alt="User's profile picture" src="res/images/me.svg">
-          </a>
-        </div>
+    <img
+        class="user-pfp"
+        src="res/images/me.svg"
+        alt="User's profile picture"
+        id="profilePhoto"
+    >
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <p id="userName">Sam Ro.</p>
+        <p id="userEmail">sam.ro@ut.ee</p>
+        <p class="logout" onclick="logout()">logout</p>
+    </div>
+</div>
       </nav>
     </header>
 

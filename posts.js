@@ -91,3 +91,29 @@ function renderError(error) {
 }
 
 loadPosts().then(r => renderPosts(r));
+
+function toggleDropdown() {
+    const dropdown = document.getElementById("dropdownMenu");
+    dropdown.classList.toggle("show");
+}
+
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "login.html";
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const profilePhoto = document.getElementById("profilePhoto");
+    const dropdown = document.getElementById("dropdownMenu");
+
+    profilePhoto.addEventListener("click", function () {
+        dropdown.classList.toggle("show");
+    });
+
+});
+
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "login.html";
+}
