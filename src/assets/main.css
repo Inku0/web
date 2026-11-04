@@ -1,18 +1,7 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
 }
 
 @media (hover: hover) {
@@ -22,14 +11,127 @@ a,
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(216, 234, 240);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* the following three rulesets are for keeping the footer at the bottom of the page */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* the previous three rulesets are for keeping the footer at the bottom of the page */
+
+footer {
+  flex-shrink: 0;
+  background-color: rgb(151, 168, 170);
+  border-radius: 10px;
+  gap: 15px;
+  padding: 15px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  min-height: 100vh;
+  border: 10px;
+  gap: 10px;
+}
+
+aside {
+  background-color: rgb(174, 189, 197);
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10px;
+  flex: 2;
+  padding: 1%;
+}
+
+.right-aside {
+  flex: 2;
+  background-color: rgb(151, 168, 170);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    flex-direction: column;
   }
 }
+
+/* AddPost Page and Login page styling */
+.container {
+  display:flex ;
+  flex-direction:column;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(197, 213, 214);
+  gap: 10px;
+  border-radius: 30px;
+  padding: 20px 10px;
+  width: 100%;
+  max-width: 300px;
+
+}
+
+.container > a {
+  color: rgb(26, 178, 224);
+  text-decoration: none;
+  margin: 0;
+}
+
+.container > p {
+  margin: 0;
+}
+
+.container h1 {
+  font-weight: bolder;
+  font-size: medium;
+  margin: 0px;
+}
+
+.container > button {
+  background-color: rgb(35, 35, 104);
+  color: white;
+}
+
+.container h1 ~ input {
+  width: 50%;
+}
+
+/* AddPost Input field styling */
+.inputField {
+  display: flex;
+  width: 95%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.inputField label + input {
+  width: 180px;
+
+}
+
