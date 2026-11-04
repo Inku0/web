@@ -28,7 +28,7 @@ defineProps({
     <hr>
     <div class="post-body">
       <slot name="post-body"></slot>
-      <slot class="post-pic" name="post-pic"></slot>
+      <slot class="post-pic" name="body-pic"></slot>
     </div>
   </article>
 </template>

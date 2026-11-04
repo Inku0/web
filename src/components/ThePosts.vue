@@ -1,17 +1,31 @@
 <script setup>
 import PostItem from "./PostItem.vue";
+import {computed} from "vue";
+import {useStore} from "vuex";
 
+const store = useStore();
+const posts = computed(() => store.state.posts);
 </script>
-<!--TODO dynamically fetch posts-->
 <template>
   <div class="posts">
-    <PostItem user="Sam Ro." feeling="confused" date="04.01.2030">
+    <PostItem
+      v-for="post in posts"
+      :key="post.id"
+      :user="post.author"
+      :feeling="post.feeling"
+      :date="post.date"
+      :profile-pic="post.profilePic?.url"
+      :body-pic="post.bodyPic?.url"
+    >
       <template #post-body>
-        Where is everybody?
+        {{ post.body }}
       </template>
     </PostItem>
+
+    <p v-if="!posts.length">No posts available.</p>
   </div>
 </template>
+
 
 <style scoped>
   .posts {
