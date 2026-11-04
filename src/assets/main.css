@@ -119,19 +119,3 @@ aside {
 .container h1 ~ input {
   width: 50%;
 }
-
-/* AddPost Input field styling */
-.inputField {
-  display: flex;
-  width: 95%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-
-}
-
-.inputField label + input {
-  width: 180px;
-
-}
-

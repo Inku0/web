@@ -16,10 +16,9 @@ export default {
         <li><RouterLink to="/add">Add Post</RouterLink></li>
       </ul>
       <div class="navbar-pfp">
-        <a href="login.html" id="userPfpLink">
+        <RouterLink to="/login">
           <img class="user-pfp" id="userPfp" alt="User's profile picture" src="@/assets/me.svg">
-        </a>
-        <RouterLink to="/login">Login</RouterLink>
+        </RouterLink>
         <div class="dropdown-menu" id="dropdownMenu">
           <p class="user-name" id="dropdownName"></p>
           <p class="user-email" id="dropdownEmail"> </p>
