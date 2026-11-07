@@ -41,7 +41,7 @@ const store = createStore({
         },
         feeling: "excited",
         date: "2.09.2026",
-        body: "Want some FREE EAP?</p><p>Click the link below, log in and here you go :D <a href='https://tinyurl.com/55pt2w7w' target='blank'>www.FREEEAPNOSCAM.com</a>",
+        body: "Want some FREE EAPs? Click the link below, log in, and there you go :D https://www.FREEEAPNOSCAM.com",
         bodyPic: {}
       },
       {
@@ -52,7 +52,7 @@ const store = createStore({
         },
         feeling: "blessed",
         date: "4.09.2026",
-        body: "Schoolwork is getting hard</p><p>Did some retail therapy to pick me up :D</p>",
+        body: "Schoolwork is getting hard. Did some retail therapy to pick me up :D",
         bodyPic: {
           mime: "image/webp",
           url: "res/images/balencies.webp"
@@ -66,7 +66,7 @@ const store = createStore({
         },
         feeling: "business",
         date: "4.09.2026",
-        body: "Want to make some quick and easy money?</p><p>I'll buy your car (in any condition) from you every day, every time. Call me +372123456789</p>",
+        body: "Want to make some quick and easy money? I'll buy your car (in any condition) from you every day, every time. Call me +372123456789",
         bodyPic: {
           mime: "image/avif",
           url: "res/images/auto.avif"
@@ -80,7 +80,7 @@ const store = createStore({
         },
         feeling: "rich",
         date: "17.10.2026",
-        body: "Recycling? NO!</p><p> It's called liquidating assets.",
+        body: "Recycling? NO! It's called liquidating assets.",
         bodyPic: {
           mime: "image/jpeg",
           url: "res/images/cans.jpeg"
@@ -94,7 +94,7 @@ const store = createStore({
         },
         feeling: "tired",
         date: "25.10.2026",
-        body: "Forgot that the daylight saving ended today, could have slept for an hour more.  ",
+        body: "Forgot that the daylight saving ended today, could have slept for an hour more.",
         bodyPic: {}
       },
       {
@@ -105,7 +105,7 @@ const store = createStore({
         },
         feeling: "worried",
         date: "1.11.2026",
-        body: "Happy Halloween!</p><p>Make sure, that you check your candy, found this in mine :( </p>",
+        body: "Happy Halloween! Make sure, that you check your candy, found this in mine :(",
         bodyPic: {
           mime: "image/avif",
           url: "res/images/candy.avif"
@@ -119,7 +119,7 @@ const store = createStore({
         },
         feeling: "hopeful",
         date: "1.11.2026",
-        body: "Any recomendations for a good barber in Tartu? ASAP",
+        body: "Any recommendations for a good barber in Tartu? ASAP",
         bodyPic: {}
       },
       {
