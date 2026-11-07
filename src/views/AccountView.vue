@@ -1,17 +1,17 @@
 <template>
   <form action="index.html" method="POST" id="loginForm">
-    <div class ="container">
-      <h1> Welcome to PostIt</h1>
+    <div class="container">
+      <h1>Welcome to PostIt</h1>
       <a href="#">Create an account</a>
       <p>or</p>
-      <br>
+      <br />
       <p>Log in</p>
       <label>
-        <input type="text" placeholder="Email" name="Email" id="emailInput" required>
+        <input type="text" placeholder="Email" name="Email" id="emailInput" required />
       </label>
 
       <label>
-        <input type="text" placeholder="Password" name="Password" required>
+        <input type="text" placeholder="Password" name="Password" required />
       </label>
 
       <button type="submit">Log in</button>
@@ -20,5 +20,4 @@
   </form>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

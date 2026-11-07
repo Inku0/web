@@ -12,20 +12,20 @@ defineProps({
     type: String,
     required: true,
   },
-})
+});
 </script>
 
 <template>
   <article class="post">
     <div class="post-header">
       <div>
-        <img class="user-pfp" alt="{{user}}'s profile picture" src="@/assets/me.svg">
-        <h2>{{user}}</h2>
-        <h3>is feeling {{feeling}}</h3>
+        <img class="user-pfp" alt="{{user}}'s profile picture" src="@/assets/me.svg" />
+        <h2>{{ user }}</h2>
+        <h3>is feeling {{ feeling }}</h3>
       </div>
-      <p>{{date}}</p>
+      <p>{{ date }}</p>
     </div>
-    <hr>
+    <hr />
     <div class="post-body">
       <slot name="post-body"></slot>
       <slot class="post-pic" name="body-pic"></slot>
@@ -34,38 +34,37 @@ defineProps({
 </template>
 
 <style scoped>
-  .post {
-    width: 100%;
-    background-color: white;
-    font-family: 'Courier New', Courier, monospace;
-    max-width: 100%;
-    padding: 1vw;
-    border-radius: 10px;
-    height: fit-content;
-    overflow: hidden;
-    box-sizing: border-box;
+.post {
+  width: 100%;
+  background-color: white;
+  font-family: "Courier New", Courier, monospace;
+  max-width: 100%;
+  padding: 1vw;
+  border-radius: 10px;
+  height: fit-content;
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
-  }
-
-  .post-header {
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    div {
-      display: flex;
-      align-items: center;
-      gap: 1vw;
-    }
+    gap: 1vw;
   }
+}
 
-  .user-pfp {
-    height: 5vh;
-  }
+.user-pfp {
+  height: 5vh;
+}
 
-  .post-pic {
-    display: block;
-    max-width: 100%;
-    max-height: 500px;
-    width: auto;
-  }
+.post-pic {
+  display: block;
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+}
 </style>

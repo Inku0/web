@@ -1,9 +1,9 @@
-import './assets/main.css'
+import "./assets/main.css";
 
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
-import {createStore} from "vuex";
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import { createStore } from "vuex";
 
 const store = createStore({
   state: {
@@ -12,143 +12,143 @@ const store = createStore({
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "confused",
         date: "1.09.2026",
         body: "Is everybody at class?",
-        bodyPic: {}
+        bodyPic: {},
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "happy",
         date: "3.09.2026",
         body: "Tired of studying? Join us at the UT run club with a DJ, so you can get a head start on partying.",
         bodyPic: {
           mime: "image/png",
-          url: "res/images/DJ_running.png"
-        }
+          url: "res/images/DJ_running.png",
+        },
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "excited",
         date: "2.09.2026",
         body: "Want some FREE EAPs? Click the link below, log in, and there you go :D https://www.FREEEAPNOSCAM.com",
-        bodyPic: {}
+        bodyPic: {},
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "blessed",
         date: "4.09.2026",
         body: "Schoolwork is getting hard. Did some retail therapy to pick me up :D",
         bodyPic: {
           mime: "image/webp",
-          url: "res/images/balencies.webp"
-        }
+          url: "res/images/balencies.webp",
+        },
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "business",
         date: "4.09.2026",
         body: "Want to make some quick and easy money? I'll buy your car (in any condition) from you every day, every time. Call me +372123456789",
         bodyPic: {
           mime: "image/avif",
-          url: "res/images/auto.avif"
-        }
+          url: "res/images/auto.avif",
+        },
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "rich",
         date: "17.10.2026",
         body: "Recycling? NO! It's called liquidating assets.",
         bodyPic: {
           mime: "image/jpeg",
-          url: "res/images/cans.jpeg"
-        }
+          url: "res/images/cans.jpeg",
+        },
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "tired",
         date: "25.10.2026",
         body: "Forgot that the daylight saving ended today, could have slept for an hour more.",
-        bodyPic: {}
+        bodyPic: {},
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "worried",
         date: "1.11.2026",
         body: "Happy Halloween! Make sure, that you check your candy, found this in mine :(",
         bodyPic: {
           mime: "image/avif",
-          url: "res/images/candy.avif"
-        }
+          url: "res/images/candy.avif",
+        },
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "hopeful",
         date: "1.11.2026",
         body: "Any recommendations for a good barber in Tartu? ASAP",
-        bodyPic: {}
+        bodyPic: {},
       },
       {
         author: "Sam Ro.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg"
+          url: "res/images/me.svg",
         },
         feeling: "good",
         date: "1.11.2026",
         body: "Today's mood",
         bodyPic: {
           mime: "image/webp",
-          url: "res/images/cat.webp"
-        }
-      }
-    ]
+          url: "res/images/cat.webp",
+        },
+      },
+    ],
   },
   mutations: {
-    add (state) {
+    add(state) {
       // TODO implement adding posts
-      state.posts.add()
-    }
-  }
-})
+      state.posts.add();
+    },
+  },
+});
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
-app.use(store)
+app.use(router);
+app.use(store);
 
-app.mount('#app')
+app.mount("#app");

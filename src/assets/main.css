@@ -1,4 +1,4 @@
-@import './base.css';
+@import "./base.css";
 
 #app {
   font-weight: normal;
@@ -13,12 +13,13 @@
 @media (min-width: 1024px) {
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: rgb(216, 234, 240);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* the following three rulesets are for keeping the footer at the bottom of the page */
@@ -44,7 +45,6 @@ footer {
   border-radius: 10px;
   gap: 15px;
   padding: 15px;
-
 }
 
 .content {
@@ -58,7 +58,7 @@ footer {
 
 aside {
   background-color: rgb(174, 189, 197);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   border-radius: 10px;
   flex: 2;
   padding: 1%;
