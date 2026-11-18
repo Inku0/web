@@ -1,7 +1,4 @@
-<script>
-export default {
-  name: "RightAside",
-};
+<script setup>
 </script>
 
 <template>
