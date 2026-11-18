@@ -1,3 +1,6 @@
+<script setup>
+</script>
+
 <template>
   <form action="index.html">
     <div class="container">
