@@ -36,6 +36,13 @@ nav {
   display: flex;
   justify-content: space-between;
   gap: 1vw;
+  li {
+    align-content: center;
+    list-style: none;
+  }
+}
+
+li, div {
   a {
     text-decoration: none;
     color: #141515;
@@ -45,10 +52,6 @@ nav {
   }
   a:hover {
     background-color: rgb(180, 199, 200);
-  }
-  li {
-    align-content: center;
-    list-style: none;
   }
 }
 
@@ -61,8 +64,13 @@ nav {
   width: 40px;
   object-fit: fill;
   border-radius: 25%;
-  padding-top: 5px;
-  padding-right: 5px;
+}
+
+.navbar-pfp {
+  & a {
+    display: flex;
+    padding: 0.5rem;
+  }
 }
 
 .dropdown-menu {
