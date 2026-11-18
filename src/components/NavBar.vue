@@ -1,5 +1,36 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import {useStore} from "vuex";
+import {computed, onBeforeUnmount, onMounted, ref} from "vue";
+
+const store = useStore();
+const loggedIn = computed(() => store.state.loggedIn);
+const showDropDown = ref(false);
+
+const handleProfileClick = () => {
+  if (loggedIn.value) {
+    showDropDown.value = true;
+  }
+}
+
+const handleLogoutClick = () => {
+  store.commit("logOut");
+  showDropDown.value = false;
+}
+
+const handleWindowClick = () => {
+  showDropDown.value = false;
+}
+
+onMounted(() => {
+  window.addEventListener('click', handleWindowClick)
+  window.addEventListener('blur', handleWindowClick)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('click', handleWindowClick)
+  window.removeEventListener('blur', handleWindowClick)
+})
 </script>
 
 <template>
@@ -10,14 +41,23 @@ import { RouterLink } from "vue-router";
         <li>|</li>
         <li><RouterLink to="/add">Add Post</RouterLink></li>
       </ul>
-      <div class="navbar-pfp">
-        <RouterLink to="/login">
+      <div @click.stop class="navbar-pfp">
+        <RouterLink v-if="!loggedIn" to="/login">
           <img class="user-pfp" id="userPfp" alt="User's profile picture" src="@/assets/me.svg" />
         </RouterLink>
-        <div class="dropdown-menu" id="dropdownMenu">
+        <button
+          v-else
+          aria-label="Open profile drop-down menu"
+          :aria-expanded="showDropDown"
+          @click="handleProfileClick"
+        >
+          <img class="user-pfp" id="userPfp" alt="User's profile picture" src="@/assets/me.svg" />
+        </button>
+        <p>{{loggedIn}}</p>
+        <div v-if="showDropDown" class="dropdown-menu" id="dropdownMenu">
           <p class="user-name" id="dropdownName"></p>
           <p class="user-email" id="dropdownEmail"></p>
-          <a href="#" class="logout-button" id="logoutButton">Logout</a>
+          <a @click="handleLogoutClick" href="#" class="logout-button" id="logoutButton">Logout</a>
         </div>
       </div>
     </nav>
@@ -43,14 +83,18 @@ nav {
 }
 
 li, div {
-  a {
+  a, button {
     text-decoration: none;
     color: #141515;
-    padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.2s ease;
   }
-  a:hover {
+  button {
+    background-color: rgb(151, 168, 170);
+    border: none;
+    cursor: pointer;
+  }
+  a:hover, button:hover {
     background-color: rgb(180, 199, 200);
   }
 }
@@ -67,14 +111,13 @@ li, div {
 }
 
 .navbar-pfp {
-  & a {
+  & a, button {
     display: flex;
     padding: 0.5rem;
   }
 }
 
 .dropdown-menu {
-  display: none;
   position: absolute;
   right: 0;
   top: 100%;

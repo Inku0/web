@@ -137,12 +137,19 @@ const store = createStore({
         },
       },
     ],
+    loggedIn: false
   },
   mutations: {
     add(state) {
       // TODO implement adding posts
       state.posts.add();
     },
+    logIn(state) {
+      state.loggedIn = true;
+    },
+    logOut(state) {
+      state.loggedIn = false;
+    }
   },
 });
 

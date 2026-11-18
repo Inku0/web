@@ -1,26 +1,31 @@
 <script setup>
 import {ref} from "vue";
+import {useStore} from "vuex";
 
 const buttonText = ref("Log in");
-const createHandler = () => {
+const handleCreateClick = () => {
   buttonText.value = "Sign up";
 }
-const logInHandler = () => {
+const handleLogInClick = () => {
   buttonText.value = "Log in";
 }
 const shameUser = () => {
   alert("just try to remember it :)")
 }
+const store = useStore();
+const logIn = () => {
+  store.commit("logIn");
+}
 </script>
 
 <template>
-  <form action="index.html" method="POST" id="loginForm">
+  <form @submit.prevent="logIn" action="index.html" method="POST" id="loginForm">
     <div class="container">
       <h1>Welcome to PostIt</h1>
-      <a @click="createHandler" href="#">Create an account</a>
+      <a @click="handleCreateClick" href="#">Create an account</a>
       <p>or</p>
       <br />
-      <a @click="logInHandler" href="#">Log in</a>
+      <a @click="handleLogInClick" href="#">Log in</a>
       <label>
         <input type="text" placeholder="Email" name="Email" id="emailInput" required />
       </label>
