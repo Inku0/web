@@ -1,36 +1,40 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import {useStore} from "vuex";
-import {computed, onBeforeUnmount, onMounted, ref} from "vue";
+import { useStore } from "vuex";
+import { computed, onBeforeUnmount, onMounted, ref } from "vue";
 
 const store = useStore();
 const loggedIn = computed(() => store.state.loggedIn);
+const username = computed(() => store.state.username);
+const email = computed(() => store.state.email);
 const showDropDown = ref(false);
 
 const handleProfileClick = () => {
   if (loggedIn.value) {
-    showDropDown.value = true;
+    showDropDown.value = !showDropDown.value;
   }
-}
+};
 
 const handleLogoutClick = () => {
   store.commit("logOut");
+  store.commit("clearUsername");
+  store.commit("clearEmail");
   showDropDown.value = false;
-}
+};
 
 const handleWindowClick = () => {
   showDropDown.value = false;
-}
+};
 
 onMounted(() => {
-  window.addEventListener('click', handleWindowClick)
-  window.addEventListener('blur', handleWindowClick)
-})
+  window.addEventListener("click", handleWindowClick);
+  window.addEventListener("blur", handleWindowClick);
+});
 
 onBeforeUnmount(() => {
-  window.removeEventListener('click', handleWindowClick)
-  window.removeEventListener('blur', handleWindowClick)
-})
+  window.removeEventListener("click", handleWindowClick);
+  window.removeEventListener("blur", handleWindowClick);
+});
 </script>
 
 <template>
@@ -53,10 +57,9 @@ onBeforeUnmount(() => {
         >
           <img class="user-pfp" id="userPfp" alt="User's profile picture" src="@/assets/me.svg" />
         </button>
-        <p>{{loggedIn}}</p>
         <div v-if="showDropDown" class="dropdown-menu" id="dropdownMenu">
-          <p class="user-name" id="dropdownName"></p>
-          <p class="user-email" id="dropdownEmail"></p>
+          <p class="user-name" id="dropdownName">{{ username }}</p>
+          <p class="user-email" id="dropdownEmail">{{ email }}</p>
           <a @click="handleLogoutClick" href="#" class="logout-button" id="logoutButton">Logout</a>
         </div>
       </div>
@@ -82,8 +85,10 @@ nav {
   }
 }
 
-li, div {
-  a, button {
+li,
+div {
+  a,
+  button {
     text-decoration: none;
     color: #141515;
     border-radius: 5px;
@@ -94,27 +99,31 @@ li, div {
     border: none;
     cursor: pointer;
   }
-  a:hover, button:hover {
+  a:hover,
+  button:hover {
     background-color: rgb(180, 199, 200);
   }
 }
 
 /* Dropdown menu styling */
 .navbar-pfp {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  display: inline-block;
+  p {
+    margin: 0;
+  }
+  & a,
+  button {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+  }
 }
 .navbar-pfp .user-pfp {
   width: 40px;
   object-fit: fill;
   border-radius: 25%;
-}
-
-.navbar-pfp {
-  & a, button {
-    display: flex;
-    padding: 0.5rem;
-  }
 }
 
 .dropdown-menu {

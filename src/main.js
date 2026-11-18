@@ -137,10 +137,12 @@ const store = createStore({
         },
       },
     ],
-    loggedIn: false
+    loggedIn: false,
+    username: "",
+    email: "",
   },
   mutations: {
-    add(state) {
+    addPost(state) {
       // TODO implement adding posts
       state.posts.add();
     },
@@ -149,7 +151,19 @@ const store = createStore({
     },
     logOut(state) {
       state.loggedIn = false;
-    }
+    },
+    setUsername(state, username) {
+      state.username = username;
+    },
+    clearUsername(state) {
+      state.username = "";
+    },
+    setEmail(state, email) {
+      state.email = email;
+    },
+    clearEmail(state) {
+      state.email = "";
+    },
   },
 });
 
