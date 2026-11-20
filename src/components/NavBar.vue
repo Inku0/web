@@ -92,6 +92,7 @@ div {
     text-decoration: none;
     color: #141515;
     border-radius: 5px;
+    padding: 1rem;
     transition: background-color 0.2s ease;
   }
   button {
