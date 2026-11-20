@@ -56,8 +56,7 @@ const imageSrc = (src) => {
       <p>
         <slot name="post-body"></slot>
       </p>
-      <img v-if="bodyPic" class="post-pic" v-bind:src="imageSrc(bodyPic)" />
-      <slot class="post-pic" name="body-pic"></slot>
+      <img v-if="bodyPic" class="post-pic" v-bind:src="imageSrc(bodyPic)"  alt="Posted image"/>
     </div>
     <div class="post-footer">
       <button @click="$emit('like')" class="like-btn">
