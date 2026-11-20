@@ -1,4 +1,6 @@
 <script setup>
+import thumbsUp from "@/assets/thumbs-up.png";
+
 defineProps({
   user: {
     type: String,
@@ -12,32 +14,54 @@ defineProps({
     type: String,
     required: true,
   },
+  profilePic: {
+    type: String,
+    required: true,
+  },
+  bodyPic: {
+    type: String,
+    required: false,
+  },
   likes: {
     type: Number,
     default: 0,
   },
 });
 defineEmits(["like"]);
+
+const profilePicAltText = (user) => {
+  return user + "'s profile picture";
+};
+
+const imageSrc = (src) => {
+  return new URL(src, import.meta.url).href;
+};
 </script>
 
 <template>
   <article class="post">
     <div class="post-header">
       <div>
-        <img class="user-pfp" alt="{{user}}'s profile picture" src="@/assets/me.svg" />
-        <h2>{{ user }}</h2>
-        <h3>is feeling {{ feeling }}</h3>
+        <img
+          class="user-pfp"
+          v-bind:alt="profilePicAltText(user)"
+          v-bind:src="imageSrc(profilePic)"
+        />
+        <h3>{{ user }} is feeling {{ feeling }}</h3>
       </div>
       <p>{{ date }}</p>
     </div>
     <hr />
     <div class="post-body">
-      <slot name="post-body"></slot>
+      <p>
+        <slot name="post-body"></slot>
+      </p>
+      <img v-if="bodyPic" class="post-pic" v-bind:src="imageSrc(bodyPic)" />
       <slot class="post-pic" name="body-pic"></slot>
     </div>
     <div class="post-footer">
       <button @click="$emit('like')" class="like-btn">
-        <img src="@/../res/images/thumbs-up.png" alt="Like" class="thumbs-icon" />
+        <img v-bind:src="thumbsUp" alt="Like" class="thumbs-icon" />
       </button>
       <span class="like-count">{{ likes }} likes</span>
     </div>
@@ -77,6 +101,7 @@ defineEmits(["like"]);
   max-width: 100%;
   max-height: 500px;
   width: auto;
+  border-radius: 10px;
 }
 
 .post-footer {

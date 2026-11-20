@@ -9,10 +9,10 @@ const store = createStore({
   state: {
     posts: [
       {
-        author: "Sam Ro.",
+        author: "Orange C.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/orange-cat.svg",
         },
         feeling: "confused",
         date: "1.09.2026",
@@ -20,24 +20,24 @@ const store = createStore({
         bodyPic: {},
       },
       {
-        author: "Sam Ro.",
+        author: "Ameri S.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/american-shorthair-cat.svg",
         },
         feeling: "happy",
         date: "3.09.2026",
         body: "Tired of studying? Join us at the UT run club with a DJ, so you can get a head start on partying.",
         bodyPic: {
           mime: "image/png",
-          url: "res/images/DJ_running.png",
+          url: "/src/assets/images/DJ_running.png",
         },
       },
       {
-        author: "Sam Ro.",
+        author: "Sam R.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/general-cat.svg",
         },
         feeling: "excited",
         date: "2.09.2026",
@@ -45,52 +45,52 @@ const store = createStore({
         bodyPic: {},
       },
       {
-        author: "Sam Ro.",
+        author: "Maine C.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/maine-coon-cat.svg",
         },
         feeling: "blessed",
         date: "4.09.2026",
         body: "Schoolwork is getting hard. Did some retail therapy to pick me up :D",
         bodyPic: {
           mime: "image/webp",
-          url: "res/images/balencies.webp",
+          url: "/src/assets/images/balencies.webp",
         },
       },
       {
-        author: "Sam Ro.",
+        author: "Calico C.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/calico-cat.svg",
         },
         feeling: "business",
         date: "4.09.2026",
         body: "Want to make some quick and easy money? I'll buy your car (in any condition) from you every day, every time. Call me +372123456789",
         bodyPic: {
           mime: "image/avif",
-          url: "res/images/auto.avif",
+          url: "/src/assets/images/auto.avif",
         },
       },
       {
-        author: "Sam Ro.",
+        author: "Siamese C.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/siamese-cat.svg",
         },
         feeling: "rich",
         date: "17.10.2026",
         body: "Recycling? NO! It's called liquidating assets.",
         bodyPic: {
           mime: "image/jpeg",
-          url: "res/images/cans.jpeg",
+          url: "/src/assets/images/cans.jpeg",
         },
       },
       {
-        author: "Sam Ro.",
+        author: "Smarty C.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/smart-cat.svg",
         },
         feeling: "tired",
         date: "25.10.2026",
@@ -98,24 +98,24 @@ const store = createStore({
         bodyPic: {},
       },
       {
-        author: "Sam Ro.",
+        author: "Yellow C.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/yellow-cat.svg",
         },
         feeling: "worried",
         date: "1.11.2026",
         body: "Happy Halloween! Make sure, that you check your candy, found this in mine :(",
         bodyPic: {
           mime: "image/avif",
-          url: "res/images/candy.avif",
+          url: "/src/assets/images/candy.avif",
         },
       },
       {
-        author: "Sam Ro.",
+        author: "Sam R.",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/general-cat.svg",
         },
         feeling: "hopeful",
         date: "1.11.2026",
@@ -123,17 +123,17 @@ const store = createStore({
         bodyPic: {},
       },
       {
-        author: "Sam Ro.",
+        author: "Definitely a Cat",
         profilePic: {
           mime: "image/svg+xml",
-          url: "res/images/me.svg",
+          url: "/src/assets/me.svg",
         },
         feeling: "good",
         date: "1.11.2026",
         body: "Today's mood",
         bodyPic: {
           mime: "image/webp",
-          url: "res/images/cat.webp",
+          url: "/src/assets/images/cat.webp",
         },
       },
     ],

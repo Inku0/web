@@ -6,9 +6,9 @@ import { useStore } from "vuex";
 const store = useStore();
 const posts = computed(() => store.state.posts);
 
-function handleLike(post) {
+const handleLike = (post) => {
   post.likes = (post.likes ?? 0) + 1;
-}
+};
 </script>
 <template>
   <div class="posts">
