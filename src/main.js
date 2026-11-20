@@ -165,6 +165,11 @@ const store = createStore({
       state.email = "";
     },
   },
+  resetLikes(state) {
+    state.posts.forEach((post) => {
+      post.likes = 0;
+    });
+  },
 });
 
 const app = createApp(App);

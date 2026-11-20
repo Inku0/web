@@ -12,7 +12,12 @@ defineProps({
     type: String,
     required: true,
   },
+  likes: {
+    type: Number,
+    default: 0,
+  },
 });
+defineEmits(["like"]);
 </script>
 
 <template>
@@ -29,6 +34,12 @@ defineProps({
     <div class="post-body">
       <slot name="post-body"></slot>
       <slot class="post-pic" name="body-pic"></slot>
+    </div>
+    <div class="post-footer">
+      <button @click="$emit('like')" class="like-btn">
+        <img src="@/../res/images/thumbs-up.png" alt="Like" class="thumbs-icon" />
+      </button>
+      <span class="like-count">{{ likes }} likes</span>
     </div>
   </article>
 </template>
@@ -66,5 +77,31 @@ defineProps({
   max-width: 100%;
   max-height: 500px;
   width: auto;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+.like-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.thumbs-icon {
+  width: 24px; /* Muuda suurust vastavalt vajadusele (nt 20px või 24px) */
+  height: auto;
+}
+
+.like-count {
+  font-size: 14px;
 }
 </style>

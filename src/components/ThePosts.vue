@@ -5,6 +5,10 @@ import { useStore } from "vuex";
 
 const store = useStore();
 const posts = computed(() => store.state.posts);
+
+function handleLike(post) {
+  post.likes = (post.likes ?? 0) + 1;
+}
 </script>
 <template>
   <div class="posts">
@@ -16,6 +20,8 @@ const posts = computed(() => store.state.posts);
       :date="post.date"
       :profile-pic="post.profilePic?.url"
       :body-pic="post.bodyPic?.url"
+      :likes="post.likes ?? 0"
+      @like="handleLike(post)"
     >
       <template #post-body>
         {{ post.body }}
