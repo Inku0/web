@@ -164,11 +164,11 @@ const store = createStore({
     clearEmail(state) {
       state.email = "";
     },
-  resetLikes(state) {
-    state.posts.forEach((post) => {
-      post.likes = 0;
-    });
-  },
+    resetLikes(state) {
+      state.posts.forEach((post) => {
+        post.likes = 0;
+      });
+    },
   },
 });
 
