@@ -1,0 +1,99 @@
+/*@import "./base.css";*/
+
+#app {
+  font-weight: normal;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(216, 234, 240);
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* the following three rulesets are for keeping the footer at the bottom of the page */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* the previous three rulesets are for keeping the footer at the bottom of the page */
+
+aside {
+  background-color: rgb(174, 189, 197);
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 10px;
+  flex: 2;
+  padding: 1%;
+}
+
+.right-aside {
+  flex: 2;
+  background-color: rgb(151, 168, 170);
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+.container > a {
+  color: rgb(26, 178, 224);
+  text-decoration: none;
+  margin: 0;
+}
+
+.container > p {
+  margin: 0;
+}
+
+.container h1 {
+  font-weight: bolder;
+  font-size: medium;
+  margin: 0;
+}
+
+.container > button {
+  background-color: rgb(35, 35, 104);
+  color: white;
+}
+
+.container h1 ~ input {
+  width: 50%;
+}
