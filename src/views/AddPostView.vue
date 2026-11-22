@@ -44,7 +44,7 @@
   border-radius: 30px;
   padding: 20px 10px;
   width: 100%;
-  max-width: 75vw;
+  max-width: 40vw;
 }
 
 .container > a {
