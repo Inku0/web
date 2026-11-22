@@ -25,7 +25,6 @@ const uppercaseOk = computed(() => /^[A-Z]/.test(password.value));
 const lowercaseOk = computed(() => (password.value.match(/[a-z]/g) || []).length >= 2);
 const numberOk = computed(() => /\d/.test(password.value));
 const hasLineOk = computed(() => /_/.test(password.value));
-const submitTried = ref(false);
 
 const passwordOk = computed(() => {
   return (
@@ -49,7 +48,6 @@ const passwordNeed = computed(() => {
 });
 
 const logIn = () => {
-  submitTried.value = true;
   if (!passwordOk.value) {
     return;
   }
@@ -93,7 +91,7 @@ const logIn = () => {
       <button type="submit">{{ buttonText }}</button>
       <a @click="shameUser" href="#">Forgot password</a>
     </div>
-    <div v-if="submitTried && !passwordOk" class="password-popup">
+    <div v-if="password.length > 0 && !passwordOk" class="password-popup">
       <p class="popup-title">Invalid password! Missing requirement:</p>
       <ul class="password-needs">
         <li v-for="criterion in passwordNeed" :key="criterion.id">
@@ -162,7 +160,8 @@ const logIn = () => {
   z-index: 20;
   text-align: left;
   width: 60%;
-  margin: 15px auto 0 auto;
+  margin: 25px auto;
+  padding-bottom: 25px;
 }
 .popup-title {
   font-weight: bold;
