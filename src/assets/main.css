@@ -36,14 +36,6 @@ footer {
 }
 /* the previous three rulesets are for keeping the footer at the bottom of the page */
 
-footer {
-  flex-shrink: 0;
-  background-color: rgb(151, 168, 170);
-  border-radius: 10px;
-  gap: 15px;
-  padding: 15px;
-}
-
 .content {
   display: flex;
   flex-direction: row;
