@@ -37,6 +37,17 @@ const passwordOk = computed(() => {
   );
 });
 
+const passwordNeed = computed(() => {
+  const needs = [
+    { id: 'length', text: '8 to 14 character length', ok: lengthOk.value },
+    { id: 'uppercase', text: 'Start with an uppercase letter', ok: uppercaseOk.value },
+    { id: 'lowercase', text: 'Contain at least 2 lowercase letters', ok: lowercaseOk.value },
+    { id: 'number', text: 'Contain at least one number', ok: numberOk.value },
+    { id: 'line', text: 'Contain an underscore ("_")', ok: hasLineOk.value }
+  ];
+  return needs.filter(criterion => !criterion.ok);
+});
+
 const logIn = () => {
   submitTried.value = true;
   if (!passwordOk.value) {
@@ -83,13 +94,11 @@ const logIn = () => {
       <a @click="shameUser" href="#">Forgot password</a>
     </div>
     <div v-if="submitTried && !passwordOk" class="password-popup">
-      <p class="popup-title">Invalid password! Password requirements:</p>
-      <ul class="password-criteria">
-        <li :class="{ valid: lengthOk }">8 to 14 character length</li>
-        <li :class="{ valid: uppercaseOk }">Start with an uppercase letter</li>
-        <li :class="{ valid: lowercaseOk }">Contain at least 2 lowercase letters</li>
-        <li :class="{ valid: numberOk }">Contain at least one number</li>
-        <li :class="{ valid: hasLineOk }">Contain an underscore ("_")</li>
+      <p class="popup-title">Invalid password! Missing requirement:</p>
+      <ul class="password-needs">
+        <li v-for="criterion in passwordNeed" :key="criterion.id">
+          {{ criterion.text }}
+        </li>
       </ul>
     </div>
   </form>
@@ -162,7 +171,7 @@ const logIn = () => {
   color: rgb(170, 36, 36);
 }
 
-.password-criteria {
+.password-needs {
   list-style: none;
   padding: 0;
   margin: 0;
