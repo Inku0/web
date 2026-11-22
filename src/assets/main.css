@@ -25,6 +25,12 @@ body {
   flex-direction: column;
 }
 
+#app {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
 .content {
   flex: 1 0 auto;
 }
@@ -35,15 +41,6 @@ footer {
   align-items: center;
 }
 /* the previous three rulesets are for keeping the footer at the bottom of the page */
-
-.content {
-  display: flex;
-  flex-direction: row;
-  margin: 10px;
-  min-height: 100vh;
-  border: 10px;
-  gap: 10px;
-}
 
 aside {
   background-color: rgb(174, 189, 197);
@@ -59,12 +56,6 @@ aside {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
-}
-
 .container {
   display: flex;
   box-sizing: border-box;
@@ -74,6 +65,12 @@ aside {
   gap: 10px;
   border-radius: 30px;
   width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
 }
 
 .container > a {
@@ -89,7 +86,7 @@ aside {
 .container h1 {
   font-weight: bolder;
   font-size: medium;
-  margin: 0px;
+  margin: 0;
 }
 
 .container > button {

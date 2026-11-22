@@ -6,8 +6,10 @@ import TheFooter from "@/components/TheFooter.vue";
 
 <template>
   <NavBar />
-  <!-- this must be called somewhere, such as here, for vue's router to work -->
-  <RouterView />
+  <main class="content">
+    <!-- this must be called somewhere, such as here, for vue's router to work -->
+    <RouterView />
+  </main>
   <TheFooter />
 </template>
 
